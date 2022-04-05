@@ -1,0 +1,40 @@
+<!--miniprogram/page/disable/disableQuickQuestion/disableQuickQuestion.wxml-->
+<!-- 标题 -->
+<view class="title">
+  <view class="go-back" catchtap="goBack"><text class="iconfont icon-biaoqing" id="go-back"></text></view>
+  <text class="title-content">报名名单</text>
+</view>
+
+<!-- 顶下去 -->
+<view class="sup-view"></view>
+
+<!-- 选择框 -->
+<view class='top-selected'>
+  <view bindtap='bindShowMsg_local' class="sup-select">
+    <text bindtap='bindShowMsg_local'>请选择就业类型</text>
+    <text>{{work_type.type_selected}}<text class="iconfont icon-lower-triangle"></text></text>
+  </view>
+  <!-- 下拉需要显示的列表 -->
+  <view class="select-box" wx:if="{{work_type.select}}">
+    <view wx:for="{{work_type.types}}" wx:key="unique">
+      <view class="select_one" bindtap="mySelect" data-name="{{item}}" data-which="{{work_type.select_me}}"><text>{{item}}</text></view>
+    </view>
+  </view>
+</view>
+
+<!-- 输入问题提示 -->
+<view class="tip-view">
+  <view>请输入问题</view>
+  <view class="input-tips">您还可以输入<text class="the-rest">{{rest_words}}</text>字</view>
+</view>
+
+<!-- 输入框 -->
+<view class="input-view">
+  <textarea class="input-text" placeholder="这是占位符" maxlength="500" bindinput="changeRest"></textarea>
+</view>
+
+<!-- 下面的提示 -->
+<view class="bottom-tips">免费提问可以........</view>
+
+<!-- 底部类似按钮的东西 -->
+<view class="bottom-button">提交</view>

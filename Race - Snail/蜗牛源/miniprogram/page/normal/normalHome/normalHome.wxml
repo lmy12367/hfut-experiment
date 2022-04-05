@@ -1,0 +1,135 @@
+<!--page/normalHome/normalHome.wxml-->
+<view class="normalHome">
+
+<!-- 顶上的图片 -->
+<swiper class="swiper-class" autoplay interval="3000"
+indicator-dots indicator-color="white" duration="500">
+  <swiper-item>
+    <image src="http://www.hfut.edu.cn/images/Banner_s1.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="http://www.hfut.edu.cn/images/yqbannerx.png"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="http://www.hfut.edu.cn/images/bannerfeicuihu.jpg"></image>
+  </swiper-item>
+</swiper>
+
+
+  <!-- 分割线 -->
+  <view class="dividing "></view>
+
+  <!-- 中间的广告部分 -->
+  <view class="info">
+    <view class="ad" id="ad-one">
+      <view class="concrete-ad">志愿者加盟</view>
+      <view class="one-ad">做公益就加入蜗牛源</view>
+    </view>
+    <view class="ad" id="ad-two">
+      <view>
+        <view class="concrete-ad">小蜗轻聊</view>
+        <view class="one-ad">畅享互动信息</view>
+      </view>
+      <view>
+        <img src="" class="talk-img" />
+      </view>
+    </view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="dividing "></view>
+
+  <!-- 下面的一些文章 -->
+  <view class='ticket-container'>
+    <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}"
+      scroll-top="{{scrollTop}}">
+      <!--Tab布局-->
+      <view class='title'>
+        <view class="{{0 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='0'>
+          <text>最新</text>
+          <hr class="line-style"/>
+        </view>
+        
+        <view class="{{1 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='1'>
+          <text>文章</text>
+          <hr class="line-style"/>
+        </view>
+        <view class="{{2 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='2'>
+          <text>精品商品</text>
+          <hr class="line-style" />
+        </view>
+      </view>
+ 
+      <!--内容布局-->
+      <swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+        <swiper-item class='swiper'>
+          <view wx:for="{{NewsInfo}}" wx:for-item="item" wx:key="sourceId" class='record-item' wx:if="{{item.imgsrc}}">
+            <view class='name'>
+              <image src='{{item.imgsrc}}'></image>
+              <view class="content">
+                <textarea id="title" disabled="true">{{item.title}}</textarea>
+                <view id="new-info">
+                  <span class="source">{{item.source}}</span>
+                  <span class="time">{{item.time}}</span>
+                </view>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+        <swiper-item class='swiper' class='swiper'>
+          <view wx:for="{{Articles}}" wx:for-item="item" wx:key="id" class='record-item' wx:if="{{item.title.length<30 && item.picUrl}}">
+            <view class='name'>
+              <image src='{{item.picUrl}}'></image>
+              <view class="content">
+                <textarea id="title">{{item.title}}</textarea>
+                <view id="new-info">
+                  <span class="source">{{item.nickname}}</span>
+                  <span class="time">{{item.time}}</span>
+                </view>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+        <swiper-item class='swiper' class='swiper'>
+          <view wx:for="{{goods}}" wx:for-item="item" wx:key="name" class='record-item' bindtap="goGoods">
+            <view class='name'>
+              <image src='{{item.content}}'></image>
+              <view class="content">
+                <textarea id="title">{{item.name}}</textarea>
+                <view id="new-info">
+                  <span class="source">{{item.handMaker}}</span>
+                </view>
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+      </swiper>
+    </scroll-view>
+  </view>
+</view>
+
+<!-- 顶上去 -->
+<view class="bottom-sup"></view>
+
+<!-- 下面的tabbar -->
+<view class="navi-bar">
+  <view class="one-bar" id="is-select">
+    <view>
+      <text class="iconfont icon-home" id="icon-bar"></text>
+    </view>
+    <view>首页</view>
+  </view>
+  <view class="one-bar" bindtap="goShops">
+    <view>
+      <text class="iconfont icon-fabu" id="icon-bar"></text>
+    </view>
+    <view>公益中心</view>
+  </view>
+  <view class="one-bar" bindtap="goMyInfo">
+    <view>
+      <text class="iconfont icon-wodedangxuan" id="icon-bar"></text>
+    </view>
+    <view>我的</view>
+  </view>
+</view>
+

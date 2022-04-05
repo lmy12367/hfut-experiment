@@ -1,0 +1,95 @@
+<!--miniprogram/page/disable/disableStudyVedio/disableStudyVedio.wxml-->
+<!-- 标题 -->
+<view class="title">
+  <text class="title-content">视频</text>
+</view>
+
+<!-- 顶下去 -->
+<view class="sup-view"></view>
+
+<!-- 可输入搜索框 -->
+<view class="search-bg">
+  <view class="search-view">
+    <text class="iconfont icon-sousuo"></text>
+    <input type="text" placeholder="搜索视频" placeholder-class="input-placeholder"/>
+    <text id="do-search">搜索</text>
+  </view>
+</view>
+
+<!-- 都是视频 -->
+<view class="small-title">视频</view>
+<view class="vedio-vedio">
+  <view class="left-vedio">
+    <view class="one-vedio" wx:for="{{videos}}" wx:if="{{index%2==0}}" wx:key = 'vedio'>
+      <image src='{{item.pic}}'></image>
+      <view class="vedio-description">
+        {{item.title}}
+      </view>
+    </view>
+  </view>
+  <view class="right-vedio">
+    <view class="one-vedio" wx:for="{{videos}}" wx:if="{{index%2!=0}}" wx:key = 'vedio'>
+       <image src='{{item.pic}}'></image>
+      <view class="vedio-description">
+        {{item.title}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class="small-title">本周视频</view>
+<view class="vedio-vedio">
+  <view class="left-vedio">
+    <view class="one-vedio" wx:for="{{videos}}" wx:if="{{index%2==0}}" wx:key = 'vedio'>
+      <image src='{{item.pic}}'></image>
+      <view class="vedio-description">
+        {{item.title}}
+      </view>
+    </view>
+  </view>
+  <view class="right-vedio">
+    <view class="one-vedio" wx:for="{{videos}}" wx:if="{{index%2!=0}}" wx:key = 'vedio'>
+       <image src='{{item.pic}}'></image>
+      <view class="vedio-description">
+        {{item.title}}
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 顶上去 -->
+<view class="bottom-sup"></view>
+
+<!-- 下面的tabbar -->
+<view class="navi-bar">
+  <view class="one-bar" bindtap="goHome">
+    <view>
+      <text class="iconfont icon-home" id="icon-bar"></text>
+    </view>
+    <view>首页</view>
+  </view>
+  <view class="one-bar" bindtap="goRelease">
+    <view>
+      <text class="iconfont icon-fabu" id="icon-bar"></text>
+    </view>
+    <view>发布</view>
+  </view>
+  <view class="one-bar" id="is-select">
+    <view>
+      <text class="iconfont icon-xinxi" id="icon-bar"></text>
+    </view>
+    <view>学习</view>
+  </view>
+  <view class="one-bar" bindtap="goWork">
+    <view>
+      <text class="iconfont icon-jiuye" id="icon-bar"></text>
+    </view>
+    <view>就业</view>
+  </view>
+  <view class="one-bar" bindtap="goMyInfo">
+    <view>
+      <text class="iconfont icon-wodedangxuan" id="icon-bar"></text>
+    </view>
+    <view>我的</view>
+  </view>
+</view>

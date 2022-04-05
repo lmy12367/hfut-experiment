@@ -1,0 +1,49 @@
+<!--miniprogram/page/normal/normalShopping/normalShopping.wxml-->
+
+<!-- 标题 -->
+<view class="title">
+  <!-- <view class="go-back" catchtap="goBack"><text class="iconfont icon-biaoqing" id="go-back"></text></view> -->
+  <text class="title-content">购物车</text>
+</view>
+
+<!-- 顶下去 -->
+<view class="sup"></view>
+
+<!-- 具体商品 -->
+<view class="commodity" wx:for="{{shoppings}}" wx:key="business">
+  <view class="business">{{item.business}}</view>
+  <view class="dividing "></view>
+  <checkbox-group bindchange="checkboxChange" data-business="{{item.business}}">
+    <label wx:for="{{item.shops}}" wx:key="shop" wx:for-item="shop">
+      <view class="one-buss">
+        <view>
+          <checkbox checked="{{shop.checked}}" value="{{shop.name}}">
+            <view>
+              <view>{{shop.name}}</view>
+              <view class="price">￥{{shop.price}}</view>
+            </view>
+          </checkbox>
+        </view>
+        <view class="number">
+          × {{shop.number}}
+        </view>
+      </view>
+    </label>
+  </checkbox-group>
+  <view class="over-dividing "></view>
+</view>
+
+<!-- 把下面的顶上来 -->
+<view class="sup-view"></view>
+
+<!-- 统计界面 -->
+<view class="bottom-dividing "></view>
+<view class="bottom-line">
+  <checkbox-group class="all-select" bindchange="selectAll">
+    <checkbox value="all-select">全选</checkbox>
+  </checkbox-group>
+  <view class="right-line">
+    <view class="show-price">合计：￥{{total}}</view>
+    <view class="check-out" catchtap="immeBuy" >结算</view>
+  </view>
+</view>

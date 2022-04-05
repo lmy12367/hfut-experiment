@@ -1,0 +1,7 @@
+<!--miniprogram/page/Navigation/Navigation.wxml-->
+<view class="navigation-view" >
+  <image src='https://img.imgdb.cn/item/606abb368322e6675c6e76ec.png'></image>
+  <view bindtap="goNormal" class="top">普通用户</view>
+  <view bindtap="goDisable">残障用户</view>
+  <view bindtap="goCompany">企业用户</view>
+</view>

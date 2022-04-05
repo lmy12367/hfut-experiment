@@ -1,0 +1,101 @@
+<!--miniprogram/page/normal/normalPunblicGoods/normalPublicGoods.wxml-->
+
+<!-- 可输入搜索框 -->
+<view class="search-view">
+  <text class="iconfont icon-sousuo"></text>
+  <input type="text" placeholder="请输入您想搜索的内容" placeholder-class="input-placeholder"/>
+</view>
+
+<!-- 中间的广告图片 -->
+<swiper class="swiper-class" autoplay interval="3000"
+indicator-dots indicator-color="white" duration="500">
+  <swiper-item>
+    <image src="https://goss1.cfp.cn/creative/vcg/800/new/VCG41654722879.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://goss1.cfp.cn/creative/vcg/800/new/VCG211201673028.jpg"></image>
+  </swiper-item>
+  <swiper-item>
+    <image src="https://goss.cfp.cn/creative/vcg/800/new/VCG211152370122-EYU.jpg"></image>
+  </swiper-item>
+</swiper>
+
+<!-- 中间三个图标选项 -->
+<view class="adv">
+  <view class="one-adv" bindtap="goGoods">
+    <text class="iconfont icon-4259" id="whole-country"></text>
+    <view>手工艺品</view>
+  </view>
+  <view class="one-adv" bindtap="goActivity">
+    <text class="iconfont icon-diejia" id="all-activity"></text>
+    <view>公益活动</view>
+  </view>
+</view>
+
+<!-- 分割线 -->
+<view class="dividing "></view>
+
+<!-- 热门关注的一些东西 -->
+<view>
+  <view class="follow-title">热门关注</view>
+  <view class="hot-content">
+    <view>
+      <view wx:for="{{hotFocus}}" wx:key="hotFocus">
+        <view class="hot-title" wx:if="{{index%2==0}}">
+          <text>#{{item.word}}</text>
+        </view>
+      </view>
+    </view>
+    <view>
+      <view wx:for="{{hotFocus}}" wx:key="hotFocus">
+        <view class="hot-title" wx:if="{{index%2!=0}}">
+          <text>#{{item.word}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<!-- 分割线 -->
+<view class="dividing "></view>
+
+<!-- 底部的一些信息 -->
+<view class="hot-activity">
+  <view class="activity-title">热门活动</view>
+  <view class="more-activity" bindtap="goActivity">更多<text class="iconfont icon-arrow-right"></text></view>
+</view>
+<view class="bottom-style">
+  <view class="bottom-img">
+    <image src="https://seopic.699pic.com/photo/50061/8129.jpg_wh1200.jpg" bindtap="goActivity"></image>
+    <view class="img-des">流浪猫拯救计划</view>
+  </view>
+  <view class="bottom-img">
+    <image src="https://img95.699pic.com/xsj/0f/ol/19.jpg!/fw/700/watermark/url/L3hzai93YXRlcl9kZXRhaWwyLnBuZw/align/southeast" bindtap="goActivity"></image>
+    <view class="img-des">流浪狗拯救计划</view>
+  </view>
+</view>
+
+<!-- 顶上去 -->
+<view class="bottom-sup"></view>
+
+<!-- 下面的tabbar -->
+<view class="navi-bar">
+  <view class="one-bar" bindtap="goHome">
+    <view>
+      <text class="iconfont icon-home" id="icon-bar"></text>
+    </view>
+    <view>首页</view>
+  </view>
+  <view class="one-bar" id="is-select">
+    <view>
+      <text class="iconfont icon-fabu" id="icon-bar"></text>
+    </view>
+    <view>公益中心</view>
+  </view>
+  <view class="one-bar" bindtap="goMyInfo">
+    <view>
+      <text class="iconfont icon-wodedangxuan" id="icon-bar"></text>
+    </view>
+    <view>我的</view>
+  </view>
+</view>

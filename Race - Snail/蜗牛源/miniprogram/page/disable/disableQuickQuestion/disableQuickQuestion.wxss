@@ -1,0 +1,148 @@
+/* miniprogram/page/disable/disableQuickQuestion/disableQuickQuestion.wxss */
+.title {
+  position: fixed;
+  background-color: #3a78e7;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  width: 750rpx;
+  top: 0;
+  z-index: 9999;
+  color: #fff;
+}
+
+.title-content {
+  margin: auto;
+  font-size: 35rpx;
+  letter-spacing: 3rpx;
+}
+
+#go-back {
+  position: fixed;
+  top: 0;
+  height: 60rpx;
+  width: 60rpx;
+  font-size: 40rpx;
+  font-weight: bold;
+}
+
+.sup-view {
+  width: 100%;
+  height: 80rpx;
+}
+
+.top-selected {
+  width: 650rpx;
+  margin: 0 0 0 50rpx;
+  position: relative;
+  line-height: 80rpx;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10rpx;
+  font-size: 30rpx;
+  text-align: center;
+  padding: 0 20rpx;
+  border-bottom-style: solid;
+  border-bottom-width: 3rpx;
+  border-bottom-color: rgb(240, 240, 240);
+}
+
+.sup-select {
+  display: flex;
+  justify-content: space-between;
+  color: #7b7b7b;
+}
+
+/* 下拉内容 */
+
+.select-box {
+  position: fixed;
+  top: 150rpx;
+  right: 80rpx;
+  background-color: #fff;
+  /* padding: 0 20rpx; */
+  width: 200rpx;
+  right: 0;
+  z-index: 1;
+  overflow: hidden;
+  text-align: right;
+  animation: myfirst 0.5s;
+  font-size: 25rpx;
+  float: right;
+  z-index: 9999;
+}
+
+.select_one {
+  width: 200rpx;
+  height: 80rpx;
+  position: relative;
+  line-height: 80rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+/* 下拉过度效果 */
+
+@keyframes myfirst {
+  from {
+    height: 0rpx;
+  }
+
+  to {
+    height: 210rpx;
+  }
+}
+
+.tip-view {
+  width: 680rpx;
+  height: 80rpx;
+  margin: 20rpx auto;
+  display: flex;
+  justify-content: space-between;
+  font-size: 32rpx;
+  line-height: 80rpx;
+  color: #5f5f5f;
+  letter-spacing: 3rpx;
+}
+
+.input-tips {
+  font-size: 25rpx;
+  color: #ababab;
+  letter-spacing: 4rpx;
+}
+
+.input-tips > text {
+  color: #ff4848;
+}
+
+.input-view {
+  height: 580rpx;
+}
+
+.input-text {
+  background-color: #e5e2e2;
+  margin: auto;
+  padding: 20rpx;
+  height: 500rpx;
+}
+
+.bottom-tips {
+  padding: 20rpx;
+  color: #999999;
+  height: 180rpx;
+  width: 700rpx;
+  margin: 0 auto;
+}
+
+.bottom-button {
+  height: 100rpx;
+  width: 100%;
+  text-align: center;
+  font-size: 35rpx;
+  line-height: 100rpx;
+  background-color: #3a78e7;
+  color: #fff;
+  letter-spacing: 5rpx;
+  position: fixed;
+  bottom: 0;
+}

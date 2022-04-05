@@ -1,0 +1,50 @@
+<!--miniprogram/page/normal/normalAcitivtyDetails/normalActivityDetails.wxml-->
+
+<!-- 标题 -->
+<view class="title">
+  <text class="title-content">聚会活动</text>
+  <text class="collection">收藏</text>
+</view>
+
+<!-- 发起人头像和发起人名字 -->
+<view class="head-img">
+  <image src="{{activity.img}}"></image>
+</view>
+<view class="organizer-name">
+  <text>{{activity.name}}（{{activity.authentication}}）</text>
+</view>
+
+<!-- 活动简介、联系电话、发起信息等信息 -->
+<view class="detail-info">
+  <view class="activity-details">
+    <view class="info-type">活动简介</view>
+    <view class="activity-imags">
+      <image src="https://qcloud.dpfile.com/pc/2a2n2F1EDFfkZ86PBUCB7nAd8xjB9ZBQuRhpFatYc_O20MwiZ1PnhLkFQaLXTOXwjoJrvItByyS4HHaWdXyO_I7F0UeCRQYMHlogzbt7GHgNNiIYVnHvzugZCuBITtvjski7YaLlHpkrQUr5euoQrg.jpg" wx:if="{{activity.id == 1}}"></image>
+      <image src="https://qcloud.dpfile.com/pc/7xtzqrFuXns7jNKBtKuvrLDxQcr6ZuRtytJVLeM9QmnebQ1Xh73AvSQjTEcG0qBNjoJrvItByyS4HHaWdXyO_I7F0UeCRQYMHlogzbt7GHgNNiIYVnHvzugZCuBITtvjski7YaLlHpkrQUr5euoQrg.jpg" wx:if="{{activity.id == 1}}"></image>
+      <image src="https://ss0.bdstatic.com/70cFuHSh_Q1YnxGkpoWK1HF6hhy/it/u=1691877322,1277958570&fm=26&gp=0.jpg" wx:if="{{activity.id == 2}}"></image>
+      <image src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fnimg.ws.126.net%2F%3Furl%3Dhttp%253A%252F%252Fdingyue.ws.126.net%252F2021%252F0509%252F52280d95j00qsszwi0024c000hs00dcc.jpg%26thumbnail%3D650x2147483647%26quality%3D80%26type%3Djpg&refer=http%3A%2F%2Fnimg.ws.126.net&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1625663208&t=deee5401fde594d388dd228ce42d5ee6" wx:if="{{activity.id == 2}}"></image>
+    </view>
+    <view class="activity-content">{{activity.activity_content}}</view>
+  </view>
+  
+  <view class="contact-number">
+    <view class="info-type">联系电话</view>
+    <view class="contact-phone">{{activity.phone}}</view>
+  </view>
+
+  <view class="pople-info">
+    <view class="info-type">发起信息</view>
+    <view class="type-content">{{activity.source}}</view>
+    <view class="type-content">{{activity.email}}</view>
+  </view>
+</view>
+
+<!-- 底下那两个按钮 -->
+<view class="bottom-func">
+  <view class="do-message">
+    <text class="iconfont icon-xinxi1">发送信息</text>
+  </view>
+  <view class="do-call">
+    <text class="iconfont icon-dianhua2">拨打电话</text>
+  </view>
+</view>

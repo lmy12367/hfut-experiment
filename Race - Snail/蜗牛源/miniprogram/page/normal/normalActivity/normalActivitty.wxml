@@ -1,0 +1,106 @@
+<!--miniprogram/page/normal/normalActivity/normalActivitty.wxml-->
+
+<!-- 标题 -->
+<view class="title">
+  <text class="title-content">聚会活动</text>
+</view>
+
+<!-- 顶下去 -->
+<view class="sup"></view>
+
+<!-- 可输入搜索框和下拉选项框 -->
+<view class="search-select">
+  <view class="search-view">
+    <text class="iconfont icon-sousuo"></text>
+    <input type="text" placeholder="搜索活动、地区" placeholder-class="input-placeholder"/>
+  </view>
+
+  <!-- 下拉选项框，参考自https://blog.csdn.net/qq_36232611/article/details/84939449 -->
+  <view class='select-package'>
+    <!-- 下拉框选择地区活动 -->
+    <view class='top-selected'>
+      <text bindtap='bindShowMsg_local'>{{location.location}}<text class="iconfont icon-lower-triangle"></text></text>
+      <!-- 下拉需要显示的列表 -->
+      <view class="select-box" wx:if="{{location.select}}">
+        <view wx:for="{{location.places}}" wx:key="unique">
+          <view class="select_one" bindtap="mySelect" data-name="{{item}}" data-which="{{location.select_me}}"><text>{{item}}</text></view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 下拉框选择发起人 -->
+    <view class='top-selected'>
+      <text bindtap='bindShowMsg_person'>{{person.person}}<text class="iconfont icon-lower-triangle"></text></text>
+        <!-- 下拉需要显示的列表 -->
+        <view class="select-box" wx:if="{{person.select}}">
+        <view wx:for="{{person.people}}" wx:key="unique">
+          <view class="select_one" bindtap="mySelect" data-name="{{item}}" data-which="{{person.select_me}}"><text>{{item}}</text></view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 下拉框选择排序 -->
+    <view class='top-selected'>
+      <text bindtap='bindShowMsg_sort'>{{sort.sort}}<text class="iconfont icon-lower-triangle"></text></text>
+      <!-- 下拉需要显示的列表 -->
+      <view class="select-box" wx:if="{{sort.select}}">
+        <view wx:for="{{sort.types}}" wx:key="unique">
+          <view class="select_one" bindtap="mySelect" data-name="{{item}}" data-which="{{sort.select_me}}"><text>{{item}}</text></view>
+        </view>
+      </view>
+    </view>
+  </view>
+
+  <!-- 分割线 -->
+  <view class="dividing "></view>
+</view>
+
+<view wx:for="{{activities}}" wx:key = "activities">
+  <!-- 活动粗略展示 -->
+  <view class="activity">
+    <!-- 信息展示 -->
+    <view class="info-show">
+      <!-- 头像以及各种个人和活动简介 -->
+      <view class="person-basic-info">
+        <!-- 头像 -->
+        <view class="head-img"><image src="{{item.img}}"></image></view>
+        <view>
+          <view class="person-info">
+            <text class="person-name">{{item.name}}</text>
+            <text class="person-authentication">{{item.authentication}}</text>
+          </view>
+          <view class="brief-introduction">
+            <text>{{item.introduction}}</text>
+          </view>
+        </view>
+      </view>
+      <!-- 地区 -->
+      <view class="activity-local">
+        <text>地区：{{item.local}}</text>
+      </view>
+      <!-- 下面三个按钮 -->
+      <view class="activity-button">
+        <view class="func-detail">
+          <text class="iconfont icon-xinaixin3"></text>
+          <text class="func-words">收藏</text>
+        </view>
+        <view class="func-detail">
+          <text class="iconfont icon--chuanshu"></text>
+          <text class="func-words">转发</text>
+        </view>
+        <view class="func-detail">
+          <text class="iconfont icon-huangguan"></text>
+          <text class="func-words">加入</text>
+        </view>
+      </view>
+    </view>
+    <!-- 详情按钮 -->
+    <view class="activity-details" bindtap="goDetail" data-id="{{item.id}}">详情</view>
+  </view>
+  <!-- 分割线 -->
+  <view class="activity-dividing"></view>
+</view>
+
+<view class="buttom-view">残疾人聚会活动</view>
+
+<view class="buttom-sup"></view>

@@ -1,0 +1,103 @@
+<!--miniprogram/page/company/companyInfo/companyInfo.wxml-->
+<!-- 顶上标题 -->
+<view class="title">我的</view>
+
+<!-- 一些信息，名字、电话等 -->
+
+<view class="normal-info">
+  <view class="show-info">
+    <view class="person-info">
+      <view class="head-img">
+        <img src="" />
+      </view>
+      <view class="basic-info">
+        <view class="name">{{user.name}}</view>
+        <view class="phone">电话：{{user.phone}}</view>
+      </view>
+    </view>
+    <view class="woniu-info">
+      <view class="woniu-power">蜗牛力：{{user.power}}</view>
+      <view class="woniu-vip">蜗牛会员：{{user.vip}}</view>
+    </view>
+  </view>
+  <view class="perfect-info">
+    去完善信息
+  </view>
+</view>
+
+<!-- 分割线 -->
+<view class="dividing"></view>
+
+<!-- 下面的一些功能 -->
+<view class="other-function">
+    <view class="function-spe" id="novel">
+      <view class="func-name"><text class="iconfont icon-bijiben" id="icon-img"></text><text>公司发布岗位</text></view>
+      <view><text class="iconfont icon-arrow-right"></text></view>
+    </view>
+    <view class="func-dividing "></view>
+</view>
+<view class="other-function">
+    <view class="function-spe" id="resource">
+      <view class="func-name"><text class="iconfont icon-qizi" id="icon-img"></text><text>公司参加活动</text></view>
+      <view><text class="iconfont icon-arrow-right"></text></view>
+    </view>
+    <view class="func-dividing "></view>
+</view>
+<view class="other-function">
+    <view class="function-spe" id="consult">
+      <view class="func-name"><text class="iconfont icon-location" id="icon-img"></text><text>公司地址</text></view>
+      <view><text class="iconfont icon-arrow-right"></text></view>
+    </view>
+    <view class="func-dividing "></view>
+</view>
+<view class="other-function">
+    <view class="function-spe" id="member">
+      <view class="func-name"><text class="iconfont icon-bangzhu" id="icon-img"></text><text>帮助中心</text></view>
+      <view><text class="iconfont icon-arrow-right"></text></view>
+    </view>
+    <view class="func-dividing "></view>
+</view>
+<view class="other-function">
+    <view class="function-spe" id="message">
+      <view class="func-name"><text class="iconfont icon-shezhi" id="icon-img"></text><text>设置</text></view>
+      <view><text class="iconfont icon-arrow-right"></text></view>
+    </view>
+    <view class="func-dividing "></view>
+</view>
+
+<!-- 分割线 -->
+<view class="bottom-dividing"></view>
+
+<!-- 下面的tabbar -->
+<view class="navi-bar">
+  <view class="one-bar">
+    <view>
+      <text class="iconfont icon-home" id="icon-img"></text>
+    </view>
+    <view>首页</view>
+  </view>
+  <view class="one-bar">
+    <view>
+      <text class="iconfont icon-fabu" id="icon-img"></text>
+    </view>
+    <view>发布</view>
+  </view>
+  <view class="one-bar">
+    <view>
+      <text class="iconfont icon-xinxi" id="icon-img"></text>
+    </view>
+    <view>学习</view>
+  </view>
+  <view class="one-bar">
+    <view>
+      <text class="iconfont icon-jiuye" id="icon-img"></text>
+    </view>
+    <view>就业</view>
+  </view>
+  <view class="one-bar" id="is-select">
+    <view>
+      <text class="iconfont icon-wodedangxuan" id="icon-img"></text>
+    </view>
+    <view>我的</view>
+  </view>
+</view>

@@ -1,0 +1,61 @@
+<view class="title">
+  <text class="title-content">商品列表</text>
+</view>
+
+<!-- 顶下去 -->
+<view class="sup-view"></view>
+
+<scroll-view class='nav_left' scroll-y='true'>
+  <block wx:for="{{cateItems}}" wx:key="{{index}}">
+    <view class="nav_left_items {{curNav==item.cate_id?'active':''}}" bindtap="switchRightTab" data-index='{{index}}' data-id="{{item.cate_id}}" data-name="{{item.cate_name}}">{{item.cate_name}}</view>
+  </block>
+</scroll-view>
+ 
+  <scroll-view class="nav_right" scroll-y="true">
+    <!--如果有数据，才遍历项-->
+    <view wx:if="{{goods.length>0}}">
+      <block wx:for="{{goods}}" wx:key="{{index}}" >
+        <view class="nav_right_items" data-index='{{index}}' data-id="{{item}}" bindtap="toggleDialog">
+            <image src="{{item.content}}"></image>
+            <view class='name1'>{{item.name}}</view>
+            <view class="name2">卖家：{{item.handMaker}}</view> 
+            <view class="name3">￥{{item.price}}</view> 
+        </view>
+      </block>
+    </view>
+ 
+    <!--如果无数据，则显示数据-->
+    <view class="nocate" wx:else>
+      <text>该分类暂无商品售卖</text>
+    </view>
+  </scroll-view>
+
+  <import src="../template/template.wxml" />
+  <view class="dialog {{ showDialog ? 'dialog--show' : '' }}">
+      <view class="dialog__mask" bindtap="toggleDialog" />
+      <view class="dialog__container">
+        <view class="row1">
+          <icon bindtap="closeDialog" class="image-close" type="cancel" size="25"/>
+          <image class="image-sku" src="{{selected.content}}"></image>
+          <view class="column">
+            <text class="sku-price">￥{{totalMoney}}</text>
+            <text class="sku-title">库存 {{selected.quantity}} 件</text>
+          </view>
+        </view>
+        <text class="border-line"></text>
+        <view class="row">
+          <text >购买数量</text>
+          <view class="quantity-position">
+              <!-- <template is="quantity"  data="{{ ...item,index:index}}" />  -->
+               <template is="quantity" data="{{...good,index:1}}"></template> 
+          </view>
+        </view>
+        <text class="border-line"></text>
+ 
+        <button class="button-addCar" bindtap="addCar">确定</button>
+      </view>
+  </view>
+
+<view class="buttom-view" bindtap="goShopping">购物车</view>
+
+<view class="buttom-sup"></view>

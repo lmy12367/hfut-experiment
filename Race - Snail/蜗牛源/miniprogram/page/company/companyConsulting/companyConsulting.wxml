@@ -1,0 +1,98 @@
+<!--miniprogram/page/company/companyConsulting/companyConsulting.wxml-->
+<!-- 标题 -->
+<view class="title">
+  <view class="go-back" catchtap="goBack"><text class="iconfont icon-biaoqing" id="go-back"></text></view>
+  <text class="title-content">在线咨询</text>
+</view>
+
+<!-- 顶下去 -->
+<view class="sup-view"></view>
+
+<!-- 基本信息 -->
+<view class="basic-info">
+  <view class="head-img">
+    <img src="" />
+  </view>
+  <view class="comp-info">
+    <view class="comp-name">
+      北京最牛公司
+    </view>
+    <view class="describe">最大设计公司
+最牛的设计师
+    </view>
+  </view>
+  <view class="comp-func">
+    <view class="follow">
+      关注
+    </view>
+    <view class="comp-page">
+      公司主页<text class="iconfont icon-arrow-right"></text>
+    </view>
+  </view>
+</view>
+
+<!-- 中间的岗位详情 -->
+<view class="work-details">
+  <view class="all-tags">
+    <view class="one-tag">岗位紧缺</view>
+  </view>
+  <view class="other-require">
+    <view class="require-details">本科以上本科以上本科以上本科以上本科以上本科以上本科以上本科以上本科以上本科以上本科以上本科以上本科以上本科以上本科以上本科以上本科以上本科以上本科以上本科以上本科以上</view>
+    <view class="learn-more">详情<text class="iconfont icon-lower-triangle"></text></view>
+  </view>
+</view>
+
+<!-- 分割线 -->
+<view class="dividing"></view>
+<view class="words-dividing">工作圈</view>
+<view class="bottom-dividing"></view>
+
+<!-- 选价格 -->
+<checkbox-group>
+    <checkbox class="one-programme">
+      <view class="func-details">
+        <view class="set-meal">
+          <view class="func-title">年(365天)</view>
+          <view class="func-describe">
+            让你的简历曝光度更高
+          </view>
+        </view>
+        <view class="func-price">
+          ￥199
+        </view>
+      </view>
+    </checkbox>
+</checkbox-group>
+
+<!-- 分界线 -->
+<view class="senior-dividing">————图文信息————</view>
+
+<!-- 底下的一些广告 -->
+<view class="bottom-adv">
+  <view class="one-adv">
+    <view class="adv-top">
+      <text class="iconfont icon-16"></text>
+    </view>
+    <view class="adv-center">省钱</view>
+    <view class="adv-bottom">现世最划算app</view>
+  </view>
+  <view class="one-adv">
+    <view class="adv-top">
+      <text class="iconfont icon-zan"></text>
+    </view>
+    <view class="adv-center">靠谱</view>
+    <view class="adv-bottom">纠正面试问题</view>
+  </view>
+  <view class="one-adv">
+    <view class="adv-top">
+      <text class="iconfont icon-qianbao"></text>
+    </view>
+    <view class="adv-center">赚钱</view>
+    <view class="adv-bottom">躺着也能赚钱</view>
+  </view>
+</view>
+
+<!-- 底下的按键 -->
+<view class="button-bottom">立即加群</view>
+<!-- 顶上去 -->
+<view class="sup-bottom"></view>

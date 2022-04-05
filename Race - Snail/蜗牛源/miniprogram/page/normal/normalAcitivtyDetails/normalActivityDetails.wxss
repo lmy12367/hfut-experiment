@@ -1,0 +1,158 @@
+/* miniprogram/page/normal/normalAcitivtyDetails/normalActivityDetails.wxss */
+page {
+  background-color: #3a78e7;
+  z-index: 1;
+}
+
+.title {
+  position: fixed;
+  background-color: #3a78e7;
+  color: white;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  width: 750rpx;
+  top: 0;
+  z-index: 9999;
+}
+
+.title-content {
+  margin: auto;
+  font-size: 40rpx;
+  letter-spacing: 3rpx;
+}
+
+#go-back {
+  position: fixed;
+  top: 0;
+  height: 60rpx;
+  width: 60rpx;
+  font-size: 40rpx;
+}
+
+.collection {
+  position: fixed;
+  right: 0;
+  font-size: 30rpx;
+  margin-right: 30rpx;
+  letter-spacing: 5rpx;
+}
+
+.head-img {
+  width: 150rpx;
+  height: 150rpx;
+  border-radius: 150rpx;
+  background-color: rgb(97, 50, 158);
+  position: fixed;
+  left: 300rpx;
+  top: 90rpx;
+  z-index: 9999;
+}
+.head-img image{
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.organizer-name {
+  position: fixed;
+  width: 700rpx;
+  height: 100rpx;
+  background-color: #fff;
+  z-index: 9998;
+  text-align: center;
+  line-height: 150rpx;
+  left: 25rpx;
+  top: 190rpx;
+  font-size: 30rpx;
+}
+
+.detail-info {
+  width: 660rpx;
+  height: 880rpx;
+  position: fixed;
+  top: 290rpx;
+  left: 25rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+  z-index: -1;
+}
+
+.info-type {
+  font-weight: bold;
+  border-left-style: solid;
+  border-left-color: #5990f4;
+  border-left-width: 5rpx;
+  padding-left: 20rpx;
+  margin: 20rpx 0;
+}
+
+.activity-imags {
+  width: 650rpx;
+  height: 220rpx;
+  display: flex;
+  justify-content: space-evenly;
+}
+.activity-imags image{
+  height: 100%;
+  width: 100%;
+  margin-left: 10rpx;
+  border-radius: 10rpx;
+}
+.specific-img {
+  width: 290rpx;
+  height: 150rpx;
+  background-color: rgb(61, 114, 150);
+  border-radius: 20rpx;
+}
+
+.activity-content {
+  color: #999999;
+  font-size: 28rpx;
+  letter-spacing: 3rpx;
+  line-height: 50rpx;
+}
+
+.contact-phone {
+  color: #3877e5;
+}
+
+.type-content {
+  white-space: pre-wrap;
+  font-size: 25rpx;
+  color: #999999;
+  line-height: 40rpx;
+}
+
+.bottom-func {
+  background-color: #fff;
+  width: 700rpx;
+  position: fixed;
+  z-index: 9999;
+  bottom: 35rpx;
+  display: flex;
+  left: 25rpx;
+  justify-content: space-evenly;
+  letter-spacing: 6rpx;
+  color: #fff;
+  text-align: center;
+  font-size: 40rpx;
+  line-height: 55rpx;
+  padding: 15rpx 0;
+}
+
+.do-message {
+  width: 250rpx;
+  height: 60rpx;
+  border-radius: 50rpx;
+  background-color: #3a78e7;
+}
+
+.do-call {
+  width: 250rpx;
+  height: 60rpx;
+  border-radius: 50rpx;
+  background-color: #ff9734;
+}
+
+

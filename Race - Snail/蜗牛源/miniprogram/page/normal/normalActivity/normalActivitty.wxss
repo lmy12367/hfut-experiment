@@ -1,0 +1,226 @@
+/* miniprogram/page/normal/normalActivity/normalActivitty.wxss */
+
+.title {
+  position: fixed;
+  background-color: #3a78e7;
+  color: white;
+  height: 60rpx;
+  line-height: 60rpx;
+  display: flex;
+  width: 750rpx;
+  top: 0;
+  z-index: 9999;
+}
+
+.title-content {
+  margin: auto;
+}
+
+.sup {
+  width: 100%;
+  height: 230rpx;
+}
+
+.search-select {
+  width: 750rpx;
+  position: fixed;
+  top: 60rpx;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+.search-view {
+  background-color: #f1f1f1;
+  display: flex;
+  height: 60rpx;
+  width: 680rpx;
+  line-height: 60rpx;
+  margin: 20rpx auto;
+  border-radius: 10rpx;
+  padding-left: 30rpx;
+}
+
+.search-view text {
+  font-size: 30rpx;
+  color: #c2c2c2;
+}
+
+.search-view input {
+  margin: auto 0 auto 20rpx;
+  font-size: 25rpx;
+  width: 600rpx;
+}
+
+.input-placeholder {
+  letter-spacing: 7rpx;
+}
+/*  */
+.select-package {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+/* 下拉框 */
+
+.top-selected {
+  width: 200rpx;
+  height: 50rpx;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10rpx;
+  font-size: 25rpx;
+  text-align: center;
+}
+
+/* 下拉内容 */
+
+.select-box {
+  background-color: #fff;
+  /* padding: 0 20rpx; */
+  width: 200rpx;
+  right: 0;
+  z-index: 1;
+  overflow: hidden;
+  text-align: left;
+  animation: myfirst 0.5s;
+  font-size: 25rpx;
+}
+
+.select_one {
+  width: 200rpx;
+  height: 60rpx;
+  position: relative;
+  line-height: 60rpx;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}
+
+/* 下拉过度效果 */
+
+@keyframes myfirst {
+  from {
+    height: 0rpx;
+  }
+
+  to {
+    height: 210rpx;
+  }
+}
+
+.dividing {
+  width: 100%;
+  height: 20rpx;
+  background-color: rgb(240, 240, 240);
+}
+
+.activity {
+  position: relative;
+  display: flex;
+  margin-bottom: 20rpx;
+}
+
+.info-show {
+  width: 550rpx;
+}
+
+.person-basic-info {
+  display: flex;
+}
+
+.head-img {
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 80rpx;
+  background-color: rgb(116, 79, 79);
+  margin: 0 20rpx;
+  margin-top: 10rpx;
+}
+
+.head-img image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.person-info {
+  height: 60rpx;
+  line-height: 60rpx;
+}
+
+.person-name {
+  font-size: 30rpx;
+  margin-right: 20rpx;
+  font-weight: bold;
+}
+
+.person-authentication {
+  font-size: 20rpx;
+  letter-spacing: 1rpx;
+  color: #6f6f6f;
+}
+
+.brief-introduction {
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 25rpx;
+  white-space: normal;
+  color: #4e4e4e;
+}
+
+.activity-local {
+  margin-left: 25rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  font-size: 25rpx;
+  letter-spacing: 2rpx;
+  color: #4e4e4e;
+}
+
+.activity-button {
+  display: flex;
+  justify-content: space-evenly;
+  color: #fa8906;
+  font-size: 25rpx;
+}
+
+.func-words {
+  margin-left: 20rpx;
+}
+
+.activity-details {
+  position: absolute;
+  width: 150rpx;
+  height: 50rpx;
+  text-align: center;
+  background-color: #3a78e7;
+  color: #fff;
+  line-height: 50rpx;
+  right: 30rpx;
+  top: 30rpx;
+  border-radius: 30rpx;
+  font-size: 25rpx;
+  z-index: 9998;
+}
+
+.activity-dividing {
+  width: 100%;
+  height: 10rpx;
+  background-color: rgb(240, 240, 240);
+}
+
+.buttom-view {
+  background-color: #3a78e7;
+  height: 100rpx;
+  width: 750rpx;
+  text-align: center;
+  line-height: 100rpx;
+  color: #fff;
+  font-size: 38rpx;
+  position: fixed;
+  bottom: 0;
+}
+
+.buttom-sup {
+  height: 100rpx;
+  width: 750rpx;
+}
