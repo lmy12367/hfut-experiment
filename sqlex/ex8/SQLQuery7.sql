@@ -1,0 +1,1 @@
+select * from V_AVG_S_G

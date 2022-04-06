@@ -1,0 +1,1 @@
+select * from v_sc_g

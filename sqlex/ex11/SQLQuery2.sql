@@ -1,0 +1,1 @@
+exec sp_addlogin 'lmy2018214937','2018214937','EDUC'
