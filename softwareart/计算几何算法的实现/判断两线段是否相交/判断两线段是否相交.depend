@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1558005968 source:c:\users\lenovo\desktop\新建文件夹\计算几何算法的实现\判断两线段是否相交\node.cpp
+	"node.h"
+
+1558005896 c:\users\lenovo\desktop\新建文件夹\计算几何算法的实现\判断两线段是否相交\node.h
+
+1558007888 source:c:\users\lenovo\desktop\新建文件夹\计算几何算法的实现\判断两线段是否相交\main.cpp
+	<iostream>
+	"node.h"
+
