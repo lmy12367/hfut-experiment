@@ -1,0 +1,3 @@
+﻿  源.cpp
+E:\code\c++\Project2\Project2\源.cpp(513): warning C4715: “buildFirstForOne”: 不是所有的控件路径都返回值
+  Project2.vcxproj -> E:\code\c++\Project2\Debug\Project2.exe

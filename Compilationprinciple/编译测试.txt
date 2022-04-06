@@ -1,0 +1,12 @@
+one：
+If i=0 then n++;
+a<=3b %);
+two：
+E->TG
+G->+TG|@
+T->FH
+H->*FH|@
+F->(E)|i
+i+i*i
+three:
+i+i*i

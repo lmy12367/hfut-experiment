@@ -1,0 +1,4 @@
+﻿  源.cpp
+E:\code\c++\Project2\Project2\源.cpp(700,41): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+E:\code\c++\Project2\Project2\源.cpp(527): warning C4715: “buildFirstForOne”: 不是所有的控件路径都返回值
+  Project2.vcxproj -> E:\code\c++\Project2\x64\Debug\Project2.exe

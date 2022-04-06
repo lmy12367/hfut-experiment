@@ -1,0 +1,4 @@
+﻿  源.cpp
+E:\code\c++\Project5\Project5\源.cpp(49,11): warning C4018: “<”: 有符号/无符号不匹配
+E:\code\c++\Project5\Project5\源.cpp(122,16): warning C4018: “<”: 有符号/无符号不匹配
+  Project5.vcxproj -> E:\code\c++\Project5\Debug\Project5.exe
