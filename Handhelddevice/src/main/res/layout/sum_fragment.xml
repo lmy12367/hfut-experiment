@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:background="#eeeeee"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:background="@color/color_minefragment_top"
+        android:layout_width="match_parent"
+        android:id="@+id/rl1"
+        android:layout_height="wrap_content">
+
+
+        <TextView
+            android:id="@+id/vs"
+            android:text="收支对比"
+            android:textSize="35sp"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="70dp" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:paddingTop="20sp"
+        android:background="#20B2AA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/sumshouru"
+            android:paddingLeft="20sp"
+            android:text="收入总金额"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:layout_below="@+id/vs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="NotSibling" />
+        <TextView
+            android:id="@+id/sumzhichu"
+            android:layout_alignParentRight="true"
+            android:paddingRight="20dp"
+            android:text="支出总金额"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:layout_below="@+id/vs"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:ignore="NotSibling" />
+
+        <TextView
+            android:id="@+id/tv_sumshouru"
+            android:text="收入金额"
+            android:textColor="#ffffff"
+            android:textSize="25sp"
+            android:paddingLeft="25dp"
+            android:paddingTop="10dp"
+            android:layout_below="@+id/sumshouru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_sumzhichu"
+            android:text="支出金额"
+            android:textSize="25sp"
+            android:textColor="#ffffff"
+            android:paddingLeft="260dp"
+            android:paddingTop="10dp"
+            android:layout_below="@+id/sumshouru"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl3"
+        android:paddingTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/gongzi"
+            android:text="工资:"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_gongzi"
+            android:text="money"
+            android:textColor="@color/color_minefragment_top"
+            android:textSize="25sp"
+            android:layout_toRightOf="@+id/gongzi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:paddingTop="40sp"
+            android:id="@+id/jiangjin"
+            android:text="奖金:"
+            android:layout_below="@+id/gongzi"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_jiangjin"
+            android:text="money"
+            android:textColor="@color/color_minefragment_top"
+            android:textSize="25sp"
+            android:layout_below="@+id/tv_gongzi"
+            android:paddingTop="40sp"
+            android:layout_toRightOf="@+id/gongzi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:paddingTop="40sp"
+            android:id="@+id/jianzhi"
+            android:text="兼职:"
+            android:layout_below="@+id/jiangjin"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_jianzhi"
+            android:text="money"
+            android:textColor="@color/color_minefragment_top"
+            android:textSize="25sp"
+            android:layout_below="@+id/tv_jiangjin"
+            android:paddingTop="40sp"
+            android:layout_toRightOf="@+id/gongzi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/food"
+            android:text="伙食:"
+            android:layout_marginLeft="200dp"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_food"
+            android:text="money"
+            android:textSize="25sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="200dp"
+            android:layout_toRightOf="@+id/gongzi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/clothes"
+            android:text="服饰:"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/food"
+            android:layout_marginLeft="200dp"
+            android:textSize="25sp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_clothes"
+            android:text="money"
+            android:textSize="25sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="200dp"
+            android:layout_below="@+id/tv_food"
+            android:layout_marginTop="40dp"
+            android:layout_toRightOf="@+id/gongzi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/life"
+            android:text="日用品:"
+            android:layout_below="@+id/clothes"
+            android:layout_marginLeft="180dp"
+            android:textSize="25sp"
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_life"
+            android:text="money"
+            android:textSize="25sp"
+            android:textColor="@color/colorAccent"
+            android:layout_marginLeft="210dp"
+            android:layout_below="@+id/tv_clothes"
+            android:paddingTop="40dp"
+            android:layout_toRightOf="@+id/gongzi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/qita"
+            android:text="其他："
+            android:textSize="25sp"
+            android:layout_below="@+id/life"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_qita"
+            android:text="Money"
+            android:textColor="@color/colorAccent"
+            android:textSize="25sp"
+            android:layout_marginTop="40dp"
+            android:layout_below="@+id/tv_life"
+            android:layout_marginLeft="260dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/sum"
+            android:text="收支差："
+            android:textSize="35sp"
+            android:layout_below="@+id/jianzhi"
+            android:layout_marginTop="130dp"
+            android:layout_marginLeft="30dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id="@+id/tv_sum"
+            android:text="Money"
+            android:textColor="#FF00FF"
+            android:textSize="35sp"
+            android:layout_below="@+id/jianzhi"
+            android:layout_marginTop="130dp"
+            android:layout_marginLeft="160dp"
+            android:gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+</LinearLayout>
